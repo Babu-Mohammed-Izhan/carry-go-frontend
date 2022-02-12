@@ -1,37 +1,82 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import { getDrivers } from '../services/driverService';
+import React, { useState, useEffect } from 'react';
+import Select from 'react-dropdown-select';
+import { getDrivers, searchDrivers } from '../services/driverService';
+import { cities, states } from '../utils/constants';
 
-const Dealerhome = ({ dealerinfo }) => {
-  const { isLoading, error, data } = useQuery('drivers', getDrivers());
+const Dealerhome = ({ dealerInfo }) => {
+  const [fromstate, setFromstate] = useState({});
+  const [fromcity, setFromcity] = useState({});
+  const [tostate, setTostate] = useState({});
+  const [tocity, setTocity] = useState({});
+  const [driverData, setdriverData] = useState([]);
 
-  if (isLoading) return 'Loading...';
+  useEffect(() => {
+    // const drivers = getDrivers(dealerInfo);
+    // setdriverData(drivers);
+  }, [dealerInfo]);
 
-  if (error) return 'An error has occurred: ' + error.message;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const searchData = searchDrivers(
+      fromstate.name,
+      fromcity.name,
+      tostate.name,
+      tocity.name
+    );
+
+    setdriverData(searchData);
+  };
 
   return (
-    <div>
+    <div className="flex items-center justify-center flex-col">
       <h1>Dealers</h1>
-      <form>
-        <div>
-          <h2>From</h2>
-          <label>State</label>
-          <input value="from-state" />
-          <label>City</label>
-          <input value="from-city" />
+      <form
+        onSubmit={handleSubmit}
+        className="flex w-full items-center justify-center flex-col"
+      >
+        <div className="flex w-full">
+          <div className="w-4/5">
+            <h2>From</h2>
+            <label>State</label>
+            <Select
+              options={states}
+              labelField="name"
+              valueField="name"
+              onChange={(values) => setFromstate(values[0])}
+            />
+            <label>City</label>
+            <Select
+              options={cities[fromstate.name]}
+              labelField="name"
+              valueField="name"
+              onChange={(values) => setFromcity(values[0])}
+            />
+          </div>
+          <div className="w-4/5">
+            <h2>To</h2>
+            <label>State</label>
+            <Select
+              options={states}
+              labelField="name"
+              valueField="name"
+              onChange={(values) => setTostate(values[0])}
+            />
+            <label>City</label>
+            <Select
+              options={cities[tostate.name]}
+              labelField="name"
+              valueField="name"
+              onChange={(values) => setTocity(values[0])}
+            />
+          </div>
         </div>
-        <div>
-          <h2>To</h2>
-          <label>State</label>
-          <input value="to-state" />
-          <label>City</label>
-          <input value="to-city" />
-        </div>
+        <input type="submit" />
       </form>
-      {data &&
-        data.map((driver) => {
+      {/* {driverData &&
+        driverData.map((driver) => {
           return <div>{driver.name}</div>;
-        })}
+        })} */}
     </div>
   );
 };

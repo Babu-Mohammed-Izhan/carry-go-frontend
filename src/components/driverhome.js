@@ -1,19 +1,12 @@
 import React from 'react';
-import { useQuery } from 'react-query';
-import { getDealers } from '../services/dealerService';
 
 const Driverhome = ({ driverInfo }) => {
-  const { isLoading, error, data } = useQuery('dealers', getDealers());
-
-  if (isLoading) return 'Loading...';
-
-  if (error) return 'An error has occurred: ' + error.message;
-
+  console.log(driverInfo._id);
   return (
     <div>
       <h1>Driver</h1>
-      {data &&
-        data.map((dealer) => {
+      {driverInfo.dealers &&
+        driverInfo.dealers.map((dealer) => {
           return <div>{dealer.name}</div>;
         })}
     </div>

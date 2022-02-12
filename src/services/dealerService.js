@@ -1,7 +1,9 @@
-import axios from 'axois';
+import axios from 'axios';
 
 const getDealers = async (driverData) => {
-  const dealerResponse = await axios.get('localhost:3001/api/dealer');
+  const dealerResponse = await axios.get(
+    `http://localhost:3001/api/dealer/${driverData}`
+  );
   const dealerData = dealerResponse.data;
   return dealerData;
 };
