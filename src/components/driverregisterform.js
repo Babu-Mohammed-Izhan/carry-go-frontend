@@ -46,11 +46,38 @@ const Driverregisterform = () => {
       transporter,
       experience,
       routes: [
-        { to: tocity1, from: fromcity1 },
-        { to: tocity2, from: fromcity2 },
-        { to: tocity3, from: fromcity3 },
+        { to: `${tostate1}-${tocity1}`, from: `${fromstate1}-${fromcity1}` },
+        { to: `${tostate2}-${tocity2}`, from: `${fromstate2}-${fromcity2}` },
+        { to: `${tostate3}-${tocity3}`, from: `${fromstate3}-${fromcity3}` },
       ],
     });
+
+    // console.log({
+    //   name,
+    //   username,
+    //   password,
+    //   age,
+    //   email,
+    //   mobileno,
+    //   capacity,
+    //   truckno,
+    //   transporter,
+    //   experience,
+    //   routes: [
+    //     {
+    //       to: `${tostate1.name}-${tocity1.name}`,
+    //       from: `${fromstate1.name}-${fromcity1.name}`,
+    //     },
+    //     {
+    //       to: `${tostate2.name}-${tocity2.name}`,
+    //       from: `${fromstate2.name}-${fromcity2.name}`,
+    //     },
+    //     {
+    //       to: `${tostate3.name}-${tocity3.name}`,
+    //       from: `${fromstate3.name}-${fromcity3.name}`,
+    //     },
+    //   ],
+    // });
 
     console.log(driverData);
   };
@@ -241,123 +268,111 @@ const Driverregisterform = () => {
                 </div>
                 <div>
                   <h2 className="font-bold">Route1</h2>
-                  <div className="flex w-full">
-                    <div className="w-full">
-                      <p className="font-bold">From:</p>
-                      <label>State</label>
-                      <Select
-                        className="text-black"
-                        options={states}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setFromState1(values[0])}
-                      />
-                      <label>City</label>
-                      <Select
-                        options={cities[fromstate1.name]}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setFromCity1(values[0])}
-                      />
-                    </div>
-                    <div className="w-full">
-                      <p className="font-bold">To:</p>
-                      <label>State</label>
-                      <Select
-                        options={states}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setToState1(values[0])}
-                      />
-                      <label>City</label>
-                      <Select
-                        options={cities[tostate1.name]}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setToCity1(values[0])}
-                      />
-                    </div>
-                  </div>
+
+                  <p className="font-bold">From:</p>
+                  <label>State</label>
+                  <Select
+                    className="text-black"
+                    options={states}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setFromState1(values[0])}
+                  />
+                  <label>City</label>
+                  <Select
+                    options={cities[fromstate1.name]}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setFromCity1(values[0])}
+                  />
+
+                  <p className="font-bold">To:</p>
+                  <label>State</label>
+                  <Select
+                    options={states}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setToState1(values[0])}
+                  />
+                  <label>City</label>
+                  <Select
+                    options={cities[tostate1.name]}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setToCity1(values[0])}
+                  />
                 </div>
                 <div>
                   <h2 className="font-bold">Route2</h2>
-                  <div className="flex w-full">
-                    <div className="w-full">
-                      <p className="font-bold">From:</p>
-                      <label>State</label>
-                      <Select
-                        className="text-black"
-                        options={states}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setFromState2(values[0])}
-                      />
-                      <label>City</label>
-                      <Select
-                        options={cities[fromstate2.name]}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setFromCity2(values[0])}
-                      />
-                    </div>
-                    <div className="w-full">
-                      <p className="font-bold">To:</p>
-                      <label>State</label>
-                      <Select
-                        options={states}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setToState2(values[0])}
-                      />
-                      <label>City</label>
-                      <Select
-                        options={cities[tostate2.name]}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setToCity2(values[0])}
-                      />
-                    </div>
-                  </div>
+
+                  <p className="font-bold">From:</p>
+                  <label>State</label>
+                  <Select
+                    className="text-black"
+                    options={states}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setFromState2(values[0])}
+                  />
+                  <label>City</label>
+                  <Select
+                    options={cities[fromstate2.name]}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setFromCity2(values[0])}
+                  />
+
+                  <p className="font-bold">To:</p>
+                  <label>State</label>
+                  <Select
+                    options={states}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setToState2(values[0])}
+                  />
+                  <label>City</label>
+                  <Select
+                    options={cities[tostate2.name]}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setToCity2(values[0])}
+                  />
                 </div>
                 <div>
                   <h2 className="font-bold">Route3</h2>
-                  <div className=" flex w-full">
-                    <div className="w-full">
-                      <p className="font-bold">From:</p>
-                      <label>State</label>
-                      <Select
-                        className="text-black"
-                        options={states}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setFromState3(values[0])}
-                      />
-                      <label>City</label>
-                      <Select
-                        options={cities[fromstate3.name]}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setFromCity3(values[0])}
-                      />
-                    </div>
-                    <div className="w-full">
-                      <p className="font-bold">To:</p>
-                      <label>State</label>
-                      <Select
-                        options={states}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setToState3(values[0])}
-                      />
-                      <label>City</label>
-                      <Select
-                        options={cities[tostate3.name]}
-                        labelField="name"
-                        valueField="name"
-                        onChange={(values) => setToCity3(values[0])}
-                      />
-                    </div>
-                  </div>
+
+                  <p className="font-bold">From:</p>
+                  <label>State</label>
+                  <Select
+                    className="text-black"
+                    options={states}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setFromState3(values[0])}
+                  />
+                  <label>City</label>
+                  <Select
+                    options={cities[fromstate3.name]}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setFromCity3(values[0])}
+                  />
+
+                  <p className="font-bold">To:</p>
+                  <label>State</label>
+                  <Select
+                    options={states}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setToState3(values[0])}
+                  />
+                  <label>City</label>
+                  <Select
+                    options={cities[tostate3.name]}
+                    labelField="name"
+                    valueField="name"
+                    onChange={(values) => setToCity3(values[0])}
+                  />
                 </div>
               </div>
 

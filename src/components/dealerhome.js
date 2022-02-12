@@ -8,7 +8,25 @@ const Dealerhome = ({ dealerInfo }) => {
   const [fromcity, setFromcity] = useState({});
   const [tostate, setTostate] = useState({});
   const [tocity, setTocity] = useState({});
-  const [driverData, setdriverData] = useState([]);
+  const [driverData, setdriverData] = useState([
+    {
+      name: 'Izhan',
+      username: 'izhan',
+      password: 'password',
+      age: 20,
+      email: 'babuizhan1234@gmail.com',
+      mobileno: 9944545113,
+      capacity: 100,
+      truckno: 1297342,
+      transporter: 'Izhan',
+      experience: 3,
+      routes: [
+        { to: 'TamilNadu-Chennai', from: 'Andhra Pradesh-Alampur' },
+        { to: 'asdarear', from: 'asdsad' },
+        { to: 'asffaesd', from: 'adssaddad' },
+      ],
+    },
+  ]);
 
   useEffect(() => {
     // const drivers = getDrivers(dealerInfo);
@@ -73,10 +91,11 @@ const Dealerhome = ({ dealerInfo }) => {
         </div>
         <input type="submit" />
       </form>
-      {/* {driverData &&
-        driverData.map((driver) => {
-          return <div>{driver.name}</div>;
-        })} */}
+      {driverData
+        ? driverData.map((driver) => {
+            return <div>{driver.name}</div>;
+          })
+        : 'Drivers not found'}
     </div>
   );
 };

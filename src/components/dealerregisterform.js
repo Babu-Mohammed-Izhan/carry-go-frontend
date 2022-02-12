@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Select from 'react-dropdown-select';
 import { cities, states } from '../utils/constants';
@@ -20,7 +21,20 @@ const Dealerregisterform = () => {
   const handleReg = (e) => {
     e.preventDefault();
 
-    console.log(e);
+    const driverData = axios.post('http://localhost:3001/api/dealer/register', {
+      name,
+      username,
+      password,
+      email,
+      mobileno,
+      nature,
+      weigth,
+      quantity,
+      state: state.name,
+      city: state.name,
+    });
+
+    console.log(driverData);
   };
 
   return (

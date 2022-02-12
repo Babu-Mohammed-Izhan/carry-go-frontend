@@ -5,10 +5,11 @@ const Driverhome = ({ driverInfo }) => {
   return (
     <div>
       <h1>Driver</h1>
-      {driverInfo.dealers &&
-        driverInfo.dealers.map((dealer) => {
-          return <div>{dealer.name}</div>;
-        })}
+      {driverInfo.dealers
+        ? driverInfo.dealers.map((dealer) => {
+            return <div>{dealer.name}</div>;
+          })
+        : 'There are currently no dealers'}
     </div>
   );
 };
