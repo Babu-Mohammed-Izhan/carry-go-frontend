@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Select from 'react-dropdown-select';
 import { getDrivers, searchDrivers } from '../services/driverService';
 import { cities, states } from '../utils/constants';
+import DriverCard from './driverCard';
 
 const Dealerhome = ({ dealerInfo }) => {
   const [fromstate, setFromstate] = useState({});
@@ -25,13 +26,14 @@ const Dealerhome = ({ dealerInfo }) => {
         { to: 'asdarear', from: 'asdsad' },
         { to: 'asffaesd', from: 'adssaddad' },
       ],
+      dealers: [{ '_id': '1' }],
     },
   ]);
 
-  useEffect(() => {
-    // const drivers = getDrivers(dealerInfo);
-    // setdriverData(drivers);
-  }, [dealerInfo]);
+  // useEffect(() => {
+  //   const drivers = getDrivers(dealerInfo);
+  //   setdriverData(drivers);
+  // }, [dealerInfo]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -91,11 +93,14 @@ const Dealerhome = ({ dealerInfo }) => {
         </div>
         <input type="submit" />
       </form>
-      {driverData
-        ? driverData.map((driver) => {
-            return <div>{driver.name}</div>;
-          })
-        : 'Drivers not found'}
+      <div className="flex flex-col items-center w-full">
+        <h2 className="font-semibold text-xl my-14">Drivers</h2>
+        {driverData
+          ? driverData.map((driver) => {
+              return <DriverCard driverdata={driver} dealerData={dealerInfo} />;
+            })
+          : 'Drivers not found'}
+      </div>
     </div>
   );
 };

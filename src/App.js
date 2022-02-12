@@ -9,9 +9,20 @@ import DriverLoginForm from './components/driverloginform';
 import DriverRegisterForm from './components/driverregisterform';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
   const [driver, setDriver] = useState(null);
-  const [dealer, setDealer] = useState({ _id: 'kjdsnkfsnkfnskdfn' });
+  const [dealer, setDealer] = useState({
+    _id: '1',
+    name: 'izhan',
+    username: 'izhan',
+    password: 'izhan',
+    mobileno: 'izhan',
+    nature: 'rock',
+    weigth: 10,
+    quantity: 10,
+    city: '',
+    state: '',
+  });
 
   return (
     <BrowserRouter>
