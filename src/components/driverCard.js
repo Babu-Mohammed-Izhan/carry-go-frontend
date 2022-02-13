@@ -6,7 +6,7 @@ const DriverCard = ({ driverdata, dealerData }) => {
 
   useEffect(() => {
     setDriver(driverdata);
-  }, []);
+  }, [driverdata]);
 
   const handleHire = async () => {
     const driverData = await axios.put(
