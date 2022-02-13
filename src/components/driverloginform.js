@@ -1,35 +1,44 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Driverloginform = ({ setDriver, setUser }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handelLogin = (e) => {
+  const navigate = useNavigate();
+
+  const handelLogin = async (e) => {
     e.preventDefault();
 
-    const driverData = axios.post('http://localhost:3001/api/driver/login', {
-      username,
-      password,
-    });
+    const driverData = await axios.post(
+      'http://localhost:3001/api/driver/login',
+      {
+        username,
+        password,
+      }
+    );
+
+    if (driverData.status === 200) {
+      setDriver(driverData.data.driver);
+      setUser(driverData.data.token);
+      navigate('/');
+    }
 
     console.log(driverData);
   };
 
   return (
     <div>
-      Driverloginform
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
-            <img
-              className="mx-auto h-12 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-              alt="Workflow"
-            />
+            <h1 className="text-center text-5xl font-extrabold text-gray-900">
+              {' '}
+              Carry Go{' '}
+            </h1>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Sign in to your driver account
+              Log in to your driver account
             </h2>
           </div>
           <form className="mt-8 space-y-6" onSubmit={handelLogin}>

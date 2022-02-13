@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Select from 'react-dropdown-select';
 import { cities, states } from '../utils/constants';
 import axios from 'axios';
@@ -31,70 +31,57 @@ const Driverregisterform = () => {
   const [fromstate3, setFromState3] = useState('');
   const [fromcity3, setFromCity3] = useState('');
 
+  const navigate = useNavigate();
+
   const handleReg = async (e) => {
     e.preventDefault();
 
-    const driverData = axios.post('http://localhost:3001/api/driver/register', {
-      name,
-      username,
-      password,
-      age,
-      email,
-      mobileno,
-      capacity,
-      truckno,
-      transporter,
-      experience,
-      routes: [
-        { to: `${tostate1}-${tocity1}`, from: `${fromstate1}-${fromcity1}` },
-        { to: `${tostate2}-${tocity2}`, from: `${fromstate2}-${fromcity2}` },
-        { to: `${tostate3}-${tocity3}`, from: `${fromstate3}-${fromcity3}` },
-      ],
-    });
+    const driverData = await axios.post(
+      'http://localhost:3001/api/driver/register',
+      {
+        name,
+        username,
+        password,
+        age,
+        email,
+        mobileno,
+        capacity,
+        truckno,
+        transporter,
+        experience,
+        routes: [
+          {
+            to: `${tostate1.name}-${tocity1.name}`,
+            from: `${fromstate1.name}-${fromcity1.name}`,
+          },
+          {
+            to: `${tostate2.name}-${tocity2.name}`,
+            from: `${fromstate2.name}-${fromcity2.name}`,
+          },
+          {
+            to: `${tostate3.name}-${tocity3.name}`,
+            from: `${fromstate3.name}-${fromcity3.name}`,
+          },
+        ],
+      }
+    );
 
-    // console.log({
-    //   name,
-    //   username,
-    //   password,
-    //   age,
-    //   email,
-    //   mobileno,
-    //   capacity,
-    //   truckno,
-    //   transporter,
-    //   experience,
-    //   routes: [
-    //     {
-    //       to: `${tostate1.name}-${tocity1.name}`,
-    //       from: `${fromstate1.name}-${fromcity1.name}`,
-    //     },
-    //     {
-    //       to: `${tostate2.name}-${tocity2.name}`,
-    //       from: `${fromstate2.name}-${fromcity2.name}`,
-    //     },
-    //     {
-    //       to: `${tostate3.name}-${tocity3.name}`,
-    //       from: `${fromstate3.name}-${fromcity3.name}`,
-    //     },
-    //   ],
-    // });
-
-    console.log(driverData);
+    if (driverData.status === 200) {
+      navigate('/driver');
+    }
   };
 
   return (
     <div>
-      driverregisterform
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8 text-black">
           <div>
-            <img
-              className="mx-auto h-12 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-              alt="Workflow"
-            />
+            <h1 className="text-center text-5xl font-extrabold text-gray-900">
+              {' '}
+              Carry Go{' '}
+            </h1>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Sign in to your driver account
+              Create your driver account
             </h2>
           </div>
           <form

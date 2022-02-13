@@ -9,29 +9,30 @@ import DriverLoginForm from './components/driverloginform';
 import DriverRegisterForm from './components/driverregisterform';
 
 function App() {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
   const [driver, setDriver] = useState(null);
-  const [dealer, setDealer] = useState({
-    _id: '1',
-    name: 'izhan',
-    username: 'izhan',
-    password: 'izhan',
-    mobileno: 'izhan',
-    nature: 'rock',
-    weigth: 10,
-    quantity: 10,
-    city: '',
-    state: '',
-  });
+  const [dealer, setDealer] = useState(null);
+
+  console.log(dealer, user);
 
   return (
     <BrowserRouter>
       <Routes>
         {user === null ? (
           <>
-            <Route path="/" element={<DealerLoginForm />} />
+            <Route
+              path="/"
+              element={
+                <DealerLoginForm setUser={setUser} setDealer={setDealer} />
+              }
+            />
             <Route path="/register" element={<DealerRegisterForm />} />
-            <Route path="/driver" element={<DriverLoginForm />} />
+            <Route
+              path="/driver"
+              element={
+                <DriverLoginForm setUser={setUser} setDriver={setDriver} />
+              }
+            />
             <Route path="/driver/register" element={<DriverRegisterForm />} />
           </>
         ) : (

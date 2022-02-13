@@ -9,36 +9,21 @@ const Dealerhome = ({ dealerInfo }) => {
   const [fromcity, setFromcity] = useState({});
   const [tostate, setTostate] = useState({});
   const [tocity, setTocity] = useState({});
-  const [driverData, setdriverData] = useState([
-    {
-      name: 'Izhan',
-      username: 'izhan',
-      password: 'password',
-      age: 20,
-      email: 'babuizhan1234@gmail.com',
-      mobileno: 9944545113,
-      capacity: 100,
-      truckno: 1297342,
-      transporter: 'Izhan',
-      experience: 3,
-      routes: [
-        { to: 'TamilNadu-Chennai', from: 'Andhra Pradesh-Alampur' },
-        { to: 'asdarear', from: 'asdsad' },
-        { to: 'asffaesd', from: 'adssaddad' },
-      ],
-      dealers: [{ '_id': '1' }],
-    },
-  ]);
+  const [driverData, setdriverData] = useState([]);
 
-  // useEffect(() => {
-  //   const drivers = getDrivers(dealerInfo);
-  //   setdriverData(drivers);
-  // }, [dealerInfo]);
+  useEffect(() => {
+    const dri = async () => {
+      const drivers = await getDrivers(dealerInfo);
+      console.log(drivers);
+      setdriverData(drivers);
+    };
+    dri();
+  }, [dealerInfo]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const searchData = searchDrivers(
+    const searchData = await searchDrivers(
       fromstate.name,
       fromcity.name,
       tostate.name,
@@ -50,7 +35,7 @@ const Dealerhome = ({ dealerInfo }) => {
 
   return (
     <div className="flex items-center justify-center flex-col">
-      <h1>Dealers</h1>
+      <h1 className="text-xl">Dealer</h1>
       <form
         onSubmit={handleSubmit}
         className="flex w-full items-center justify-center flex-col"
@@ -95,11 +80,19 @@ const Dealerhome = ({ dealerInfo }) => {
       </form>
       <div className="flex flex-col items-center w-full">
         <h2 className="font-semibold text-xl my-14">Drivers</h2>
-        {driverData
-          ? driverData.map((driver) => {
-              return <DriverCard driverdata={driver} dealerData={dealerInfo} />;
-            })
-          : 'Drivers not found'}
+        <div className="w-3/4 mx-auto">
+          {driverData
+            ? driverData.map((driver) => {
+                return (
+                  <DriverCard
+                    driverdata={driver}
+                    dealerData={dealerInfo}
+                    key={driver._id}
+                  />
+                );
+              })
+            : 'Drivers not found'}
+        </div>
       </div>
     </div>
   );

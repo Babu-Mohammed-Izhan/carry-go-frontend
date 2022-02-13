@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Select from 'react-dropdown-select';
 import { cities, states } from '../utils/constants';
 
@@ -16,38 +16,43 @@ const Dealerregisterform = () => {
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
 
+  const navigate = useNavigate();
+
   console.log(state, city);
 
-  const handleReg = (e) => {
+  const handleReg = async (e) => {
     e.preventDefault();
 
-    const driverData = axios.post('http://localhost:3001/api/dealer/register', {
-      name,
-      username,
-      password,
-      email,
-      mobileno,
-      nature,
-      weigth,
-      quantity,
-      state: state.name,
-      city: state.name,
-    });
+    const dealerData = await axios.post(
+      'http://localhost:3001/api/dealer/register',
+      {
+        name,
+        username,
+        password,
+        email,
+        mobileno,
+        nature,
+        weigth,
+        quantity,
+        state: state.name,
+        city: city.name,
+      }
+    );
 
-    console.log(driverData);
+    if (dealerData.status === 200) {
+      navigate('/');
+    }
   };
 
   return (
     <div>
-      Dealerregisterform
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
-            <img
-              className="mx-auto h-12 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-              alt="Workflow"
-            />
+            <h1 className="text-center text-5xl font-extrabold text-gray-900">
+              {' '}
+              Carry Go{' '}
+            </h1>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your dealer account
             </h2>
