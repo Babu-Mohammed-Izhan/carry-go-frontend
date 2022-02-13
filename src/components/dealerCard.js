@@ -11,8 +11,8 @@ const DealerCard = ({ dealerData }) => {
       </div>
       <div>
         <h1>Nature: {dealerData.nature}</h1>
-        <p>Quantity: {dealerData.quantity}l</p>
-        <p>Weight: {dealerData.weight}kg</p>
+        <p>Quantity: {dealerData.quantity}</p>
+        <p>Weight: {dealerData.weigth}kg</p>
       </div>
     </div>
   );
