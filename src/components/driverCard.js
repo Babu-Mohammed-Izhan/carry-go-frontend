@@ -23,11 +23,12 @@ const DriverCard = ({ driverdata, dealerData }) => {
   return (
     <div className="flex justify-between items-center w-full px-5 shadow-md my-5">
       <div>
-        <h1>Name: {driver.name}</h1>
-        <h1>Age: {driver.age}</h1>
-        <h2>Mobile No: {driver.mobileno}</h2>
-        <h2>Email: {driver.email}</h2>
-        <h2>Experience: {driver.experience}</h2>
+        <h2>Name: {driver.name}</h2>
+        <h2>Age: {driver.age}</h2>
+        <h3>Mobile No: {driver.mobileno}</h3>
+        <h3>Email: {driver.email}</h3>
+        <h3>Experience: {driver.experience}</h3>
+        <h3>Transporter: {driver.transporter}</h3>
         {driver.routes &&
           driver.routes.map((r, idx) => {
             return (
