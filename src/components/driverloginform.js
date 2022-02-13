@@ -26,8 +26,10 @@ const Driverloginform = ({ setDriver, setUser }) => {
         JSON.stringify({ ...data, role: 'driver' })
       );
 
-      setDriver({ ...data._doc, token: data.tokenn, role: 'driver' });
-      setUser({ ...data._doc, token: data.token, role: 'driver' });
+      console.log(data);
+
+      setDriver({ ...data, role: 'driver' });
+      setUser({ ...data, role: 'driver' });
       navigate('/');
     }
   };

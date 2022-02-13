@@ -26,8 +26,8 @@ const Dealerloginform = ({ setDealer, setUser }) => {
         JSON.stringify({ ...data, role: 'dealer' })
       );
 
-      setDealer({ ...data._doc, token: data.tokenn, role: 'dealer' });
-      setUser({ ...data._doc, token: data.token, role: 'dealer' });
+      setDealer({ ...data, role: 'dealer' });
+      setUser({ ...data, role: 'dealer' });
       navigate('/');
     }
   };
