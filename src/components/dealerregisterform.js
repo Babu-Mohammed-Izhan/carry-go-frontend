@@ -18,13 +18,11 @@ const Dealerregisterform = () => {
 
   const navigate = useNavigate();
 
-  console.log(state, city);
-
   const handleReg = async (e) => {
     e.preventDefault();
 
     const dealerData = await axios.post(
-      'http://localhost:3001/api/dealer/register',
+      `${process.env.REACT_APP_API_URL}/api/dealer/register`,
       {
         name,
         username,

@@ -14,7 +14,6 @@ const Dealerhome = ({ dealerInfo }) => {
   useEffect(() => {
     const dri = async () => {
       const drivers = await getDrivers(dealerInfo);
-      console.log(drivers);
       setdriverData(drivers);
     };
     dri();
@@ -35,10 +34,10 @@ const Dealerhome = ({ dealerInfo }) => {
 
   return (
     <div className="flex items-center justify-center flex-col">
-      <h1 className="text-xl">Dealer</h1>
+      <h1 className="text-xl">Dealer:{dealerInfo.name}</h1>
       <form
         onSubmit={handleSubmit}
-        className="flex w-full items-center justify-center flex-col"
+        className="flex md:w-1/2 w-10/12 mx-auto items-center justify-center flex-col"
       >
         <div className="flex w-full">
           <div className="w-4/5">
@@ -76,11 +75,14 @@ const Dealerhome = ({ dealerInfo }) => {
             />
           </div>
         </div>
-        <input type="submit" />
+        <input
+          className="my-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          type="submit"
+        />
       </form>
       <div className="flex flex-col items-center w-full">
-        <h2 className="font-semibold text-xl my-14">Drivers</h2>
-        <div className="w-3/4 mx-auto">
+        <h2 className="font-semibold text-3xl my-7">Drivers</h2>
+        <div className="md:w-3/4 w-10/12 mx-auto">
           {driverData
             ? driverData.map((driver) => {
                 return (

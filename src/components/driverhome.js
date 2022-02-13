@@ -2,7 +2,6 @@ import React from 'react';
 import DealerCard from './dealerCard';
 
 const Driverhome = ({ driverInfo }) => {
-  console.log(driverInfo);
   return (
     <div className="flex items-center justify-center flex-col">
       <h1 className="font-bold text-xl my-10">Driver: {driverInfo.name}</h1>

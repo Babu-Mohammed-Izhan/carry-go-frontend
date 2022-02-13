@@ -37,7 +37,7 @@ const Driverregisterform = () => {
     e.preventDefault();
 
     const driverData = await axios.post(
-      'http://localhost:3001/api/driver/register',
+      `${process.env.REACT_APP_API_URL}/api/driver/register`,
       {
         name,
         username,

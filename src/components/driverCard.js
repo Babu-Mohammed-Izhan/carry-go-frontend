@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const driverCard = ({ driverdata, dealerData }) => {
+const DriverCard = ({ driverdata, dealerData }) => {
+  const [driver, setDriver] = useState('');
+
+  useEffect(() => {
+    setDriver(driverdata);
+  }, []);
+
   const handleHire = async () => {
     const driverData = await axios.put(
-      `http://localhost:3001/api/driver/${driverdata._id}`,
+      `${process.env.REACT_APP_API_URL}/api/driver/${driverdata._id}`,
       { dealer: dealerData }
     );
-
-    console.log(driverData);
+    setDriver(driverData);
   };
 
   const checkUsername = (obj) => obj._id === dealerData._id;
 
   return (
-    <div className="flex justify-between items-center w-full px-5 h-16 shadow-md">
+    <div className="flex justify-between items-center w-full px-5 shadow-md">
       <div>
-        <h1>Name:{driverdata.name}</h1>
-        <h1>Age:{driverdata.age}</h1>
+        <h1>Name: {driver.name}</h1>
+        <h1>Age: {driver.age}</h1>
+        <h2>Mobile No: {driver.mobileno}</h2>
+        <h2>Email: {driver.email}</h2>
+        <h2>Experience: {driver.experience}</h2>
       </div>
-      {driverdata.dealers.some(checkUsername) ? (
+      {driver.dealers && driver.dealers.some(checkUsername) ? (
         <div>Hired</div>
       ) : (
         <button
@@ -33,4 +41,4 @@ const driverCard = ({ driverdata, dealerData }) => {
   );
 };
 
-export default driverCard;
+export default DriverCard;

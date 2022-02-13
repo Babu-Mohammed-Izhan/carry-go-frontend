@@ -1,7 +1,6 @@
 import React from 'react';
 
 const DealerCard = ({ dealerData }) => {
-  console.log(dealerData);
   return (
     <div className="flex w-3/4 mx-auto justify-between shadow-lg rounded p-2">
       <div>

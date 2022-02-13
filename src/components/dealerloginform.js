@@ -12,7 +12,7 @@ const Dealerloginform = ({ setDealer, setUser }) => {
     e.preventDefault();
 
     const dealerData = await axios.post(
-      'http://localhost:3001/api/dealer/login',
+      `${process.env.REACT_APP_API_URL}/api/dealer/login`,
       {
         username,
         password,
@@ -20,8 +20,14 @@ const Dealerloginform = ({ setDealer, setUser }) => {
     );
 
     if (dealerData.status === 200) {
-      setDealer(dealerData.data.dealer);
-      setUser(dealerData.data.token);
+      const data = dealerData.data;
+      window.localStorage.setItem(
+        'loggedGoappUser',
+        JSON.stringify({ ...data, role: 'dealer' })
+      );
+
+      setDealer({ ...data._doc, token: data.tokenn, role: 'dealer' });
+      setUser({ ...data._doc, token: data.token, role: 'dealer' });
       navigate('/');
     }
   };

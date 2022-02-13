@@ -12,7 +12,7 @@ const Driverloginform = ({ setDriver, setUser }) => {
     e.preventDefault();
 
     const driverData = await axios.post(
-      'http://localhost:3001/api/driver/login',
+      `${process.env.REACT_APP_API_URL}/api/driver/login`,
       {
         username,
         password,
@@ -20,12 +20,16 @@ const Driverloginform = ({ setDriver, setUser }) => {
     );
 
     if (driverData.status === 200) {
-      setDriver(driverData.data.driver);
-      setUser(driverData.data.token);
+      const data = driverData.data;
+      window.localStorage.setItem(
+        'loggedGoappUser',
+        JSON.stringify({ ...data, role: 'driver' })
+      );
+
+      setDriver({ ...data._doc, token: data.tokenn, role: 'driver' });
+      setUser({ ...data._doc, token: data.token, role: 'driver' });
       navigate('/');
     }
-
-    console.log(driverData);
   };
 
   return (
