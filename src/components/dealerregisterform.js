@@ -59,9 +59,7 @@ const Dealerregisterform = () => {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
-                <label htmlFor="name" className="sr-only">
-                  Name
-                </label>
+                <label htmlFor="name">Name</label>
                 <input
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -70,14 +68,11 @@ const Dealerregisterform = () => {
                   type="text"
                   autoComplete="name"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Name"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="username" className="sr-only">
-                  Username
-                </label>
+                <label htmlFor="username">Username</label>
                 <input
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
@@ -86,14 +81,11 @@ const Dealerregisterform = () => {
                   type="text"
                   autoComplete="username"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Username"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="sr-only">
-                  Email
-                </label>
+                <label htmlFor="email">Email</label>
                 <input
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -102,14 +94,11 @@ const Dealerregisterform = () => {
                   type="email"
                   autoComplete="email"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Email"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="password" className="sr-only">
-                  Password
-                </label>
+                <label htmlFor="password">Password</label>
                 <input
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -118,14 +107,11 @@ const Dealerregisterform = () => {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Password"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="mobileno" className="sr-only">
-                  Mobile No.
-                </label>
+                <label htmlFor="mobileno">Mobile No.</label>
                 <input
                   value={mobileno}
                   onChange={(e) => setMobileno(e.target.value)}
@@ -134,14 +120,11 @@ const Dealerregisterform = () => {
                   type="tel"
                   autoComplete="mobileno"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Mobile No."
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="nature" className="sr-only">
-                  Nature of material
-                </label>
+                <label htmlFor="nature">Nature of material</label>
                 <input
                   value={nature}
                   onChange={(e) => setNature(e.target.value)}
@@ -150,14 +133,11 @@ const Dealerregisterform = () => {
                   type="text"
                   autoComplete="nature"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Nature of material"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="weight" className="sr-only">
-                  Weight of material
-                </label>
+                <label htmlFor="weight">Weight of material</label>
                 <input
                   value={weigth}
                   onChange={(e) => setWeight(e.target.value)}
@@ -166,14 +146,11 @@ const Dealerregisterform = () => {
                   type="number"
                   autoComplete="weight"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Weight of material"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="quantity" className="sr-only">
-                  Quantity of material
-                </label>
+                <label htmlFor="quantity">Quantity of material</label>
                 <input
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
@@ -182,8 +159,7 @@ const Dealerregisterform = () => {
                   type="number"
                   autoComplete="quantity"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Quantity of material"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <label>State</label>

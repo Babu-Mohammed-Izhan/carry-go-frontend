@@ -93,9 +93,7 @@ const Driverregisterform = () => {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
-                <label htmlFor="name" className="sr-only">
-                  Name
-                </label>
+                <label htmlFor="name">Name</label>
                 <input
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -104,14 +102,11 @@ const Driverregisterform = () => {
                   type="text"
                   autoComplete="name"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Name"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="username" className="sr-only">
-                  Username
-                </label>
+                <label htmlFor="username">Username</label>
                 <input
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
@@ -120,14 +115,11 @@ const Driverregisterform = () => {
                   type="text"
                   autoComplete="username"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Username"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="username" className="sr-only">
-                  Email
-                </label>
+                <label htmlFor="username">Email</label>
                 <input
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -136,14 +128,11 @@ const Driverregisterform = () => {
                   type="email"
                   autoComplete="email"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Email"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="password" className="sr-only">
-                  Password
-                </label>
+                <label htmlFor="password">Password</label>
                 <input
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -152,14 +141,11 @@ const Driverregisterform = () => {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Password"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="age" className="sr-only">
-                  Age
-                </label>
+                <label htmlFor="age">Age</label>
                 <input
                   value={age}
                   onChange={(e) => setAge(e.target.value)}
@@ -168,14 +154,11 @@ const Driverregisterform = () => {
                   type="number"
                   autoComplete="age"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Age"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="truckno" className="sr-only">
-                  Truck No.
-                </label>
+                <label htmlFor="truckno">Truck No.</label>
                 <input
                   value={truckno}
                   onChange={(e) => setTruckno(e.target.value)}
@@ -184,14 +167,11 @@ const Driverregisterform = () => {
                   type="number"
                   autoComplete="truckno"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Truck Number"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="username" className="sr-only">
-                  Mobile No.
-                </label>
+                <label htmlFor="username">Mobile No.</label>
                 <input
                   value={mobileno}
                   onChange={(e) => setMobileno(e.target.value)}
@@ -200,14 +180,11 @@ const Driverregisterform = () => {
                   type="tel"
                   autoComplete="mobileno"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Mobile No."
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
-                <label htmlFor="capacity" className="sr-only">
-                  Truck Capacity
-                </label>
+                <label htmlFor="capacity">Truck Capacity</label>
                 <input
                   value={capacity}
                   onChange={(e) => setCapacity(e.target.value)}
@@ -216,15 +193,12 @@ const Driverregisterform = () => {
                   type="number"
                   autoComplete="capacity"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Truck Capacity"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 />
               </div>
               <div>
                 <div>
-                  <label htmlFor="transporter" className="sr-only">
-                    Transporter Name
-                  </label>
+                  <label htmlFor="transporter">Transporter Name</label>
                   <input
                     value={transporter}
                     onChange={(e) => setTransporter(e.target.value)}
@@ -233,14 +207,11 @@ const Driverregisterform = () => {
                     type="text"
                     autoComplete="transporter"
                     required
-                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                    placeholder="Transporter Name"
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="experience" className="sr-only">
-                    Driving Experience
-                  </label>
+                  <label htmlFor="experience">Driving Experience</label>
                   <input
                     value={experience}
                     onChange={(e) => setExperience(e.target.value)}
@@ -249,8 +220,7 @@ const Driverregisterform = () => {
                     type="number"
                     autoComplete="experience"
                     required
-                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                    placeholder="Driving Experience"
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                   />
                 </div>
                 <div>
