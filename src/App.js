@@ -61,10 +61,10 @@ function App() {
         <>
           <Navbar handleLogout={() => handleLogout()} />
           <Routes>
-            {driver === null ? null : (
+            {driver === null && (
               <Route path="/" element={<DriverHome driverInfo={driver} />} />
             )}
-            {dealer === null ? null : (
+            {dealer === null && (
               <Route path="/" element={<DealerHome dealerInfo={dealer} />} />
             )}
           </Routes>
