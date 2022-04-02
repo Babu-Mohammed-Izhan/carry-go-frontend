@@ -15,6 +15,7 @@ function App() {
   const [dealer, setDealer] = useState(null);
 
   const navigate = useNavigate();
+  console.log(dealer);
 
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem('loggedGoappUser');
@@ -59,10 +60,10 @@ function App() {
     <>
       <Navbar handleLogout={() => handleLogout()} />
       <Routes>
-        {driver === null && (
+        {driver != null && (
           <Route path="/" element={<DriverHome driverInfo={driver} />} />
         )}
-        {dealer === null && (
+        {dealer != null && (
           <Route path="/" element={<DealerHome dealerInfo={dealer} />} />
         )}
       </Routes>
