@@ -38,39 +38,35 @@ function App() {
     navigate('/');
   };
 
+  if (user === null) {
+    return (
+      <Routes>
+        <Route
+          path="/"
+          element={<DealerLoginForm setUser={setUser} setDealer={setDealer} />}
+        />
+        <Route path="/register" element={<DealerRegisterForm />} />
+        <Route
+          path="/driver"
+          element={<DriverLoginForm setUser={setUser} setDriver={setDriver} />}
+        />
+        <Route path="/driver/register" element={<DriverRegisterForm />} />
+      </Routes>
+    );
+  }
+
   return (
-    <div>
-      {user === null ? (
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <DealerLoginForm setUser={setUser} setDealer={setDealer} />
-            }
-          />
-          <Route path="/register" element={<DealerRegisterForm />} />
-          <Route
-            path="/driver"
-            element={
-              <DriverLoginForm setUser={setUser} setDriver={setDriver} />
-            }
-          />
-          <Route path="/driver/register" element={<DriverRegisterForm />} />
-        </Routes>
-      ) : (
-        <>
-          <Navbar handleLogout={() => handleLogout()} />
-          <Routes>
-            {driver === null && (
-              <Route path="/" element={<DriverHome driverInfo={driver} />} />
-            )}
-            {dealer === null && (
-              <Route path="/" element={<DealerHome dealerInfo={dealer} />} />
-            )}
-          </Routes>
-        </>
-      )}
-    </div>
+    <>
+      <Navbar handleLogout={() => handleLogout()} />
+      <Routes>
+        {driver === null && (
+          <Route path="/" element={<DriverHome driverInfo={driver} />} />
+        )}
+        {dealer === null && (
+          <Route path="/" element={<DealerHome dealerInfo={dealer} />} />
+        )}
+      </Routes>
+    </>
   );
 }
 
