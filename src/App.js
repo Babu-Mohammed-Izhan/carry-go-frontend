@@ -15,7 +15,6 @@ function App() {
   const [dealer, setDealer] = useState(null);
 
   const navigate = useNavigate();
-  console.log(dealer);
 
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem('loggedGoappUser');

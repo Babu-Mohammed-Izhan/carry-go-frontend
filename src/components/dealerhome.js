@@ -37,11 +37,11 @@ const Dealerhome = ({ dealerInfo }) => {
       <h1 className="text-xl">Dealer:{dealerInfo?.name}</h1>
       <form
         onSubmit={handleSubmit}
-        className="flex md:w-1/2 w-10/12 mx-auto items-center justify-center flex-col"
+        className="flex md:w-1/2 w-10/12 mx-auto items-center justify-center flex-col mt-10"
       >
         <div className="flex w-full">
           <div className="w-4/5">
-            <h2>From</h2>
+            <h2 className="font-bold text-2xl mb-2">From</h2>
             <label>State</label>
             <Select
               options={states}
@@ -57,8 +57,8 @@ const Dealerhome = ({ dealerInfo }) => {
               onChange={(values) => setFromcity(values[0])}
             />
           </div>
-          <div className="w-4/5">
-            <h2>To</h2>
+          <div className="w-4/5 ml-3">
+            <h2 className="font-bold text-2xl mb-2">To</h2>
             <label>State</label>
             <Select
               options={states}

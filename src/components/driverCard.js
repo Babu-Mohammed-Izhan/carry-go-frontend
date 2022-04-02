@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const DriverCard = ({ driverdata, dealerData }) => {
   const [driver, setDriver] = useState('');
+  const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
     setDriver(driverdata);
@@ -21,24 +22,31 @@ const DriverCard = ({ driverdata, dealerData }) => {
   const checkUsername = (obj) => obj._id === dealerData._id;
 
   return (
-    <div className="flex justify-between items-center w-full px-5 shadow-md my-5">
+    <div
+      className="flex justify-between items-center w-full px-5 shadow-md my-5 cursor-pointer"
+      onClick={() => setClicked(!clicked)}
+    >
       <div>
         <h2>Name: {driver.name}</h2>
-        <h2>Age: {driver.age}</h2>
-        <h3>Mobile No: {driver.mobileno}</h3>
-        <h3>Email: {driver.email}</h3>
-        <h3>Experience: {driver.experience}</h3>
+        <h2>Age: {driver.age} years old</h2>
+        <h3>Experience: {driver.experience} years</h3>
         <h3>Transporter: {driver.transporter}</h3>
-        {driver.routes &&
-          driver.routes.map((r, idx) => {
-            return (
-              <div key={r.from}>
-                <span className="font-bold">Route: {idx + 1}</span>
-                <h2>From: {r.from}</h2>
-                <h2>To: {r.to}</h2>
-              </div>
-            );
-          })}
+        {clicked ? (
+          <>
+            <h3>Mobile No: {driver.mobileno}</h3>
+            <h3>Email: {driver.email}</h3>
+            {driver.routes &&
+              driver.routes.map((r, idx) => {
+                return (
+                  <div key={r.from}>
+                    <span className="font-bold">Route: {idx + 1}</span>
+                    <h2>From: {r.from}</h2>
+                    <h2>To: {r.to}</h2>
+                  </div>
+                );
+              })}
+          </>
+        ) : null}
       </div>
       {driver.dealers && driver.dealers.some(checkUsername) ? (
         <div className="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 ">
