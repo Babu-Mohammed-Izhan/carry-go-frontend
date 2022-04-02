@@ -34,7 +34,7 @@ const Dealerhome = ({ dealerInfo }) => {
 
   return (
     <div className="flex items-center justify-center flex-col">
-      <h1 className="text-xl">Dealer:{dealerInfo.name}</h1>
+      <h1 className="text-xl">Dealer:{dealerInfo?.name}</h1>
       <form
         onSubmit={handleSubmit}
         className="flex md:w-1/2 w-10/12 mx-auto items-center justify-center flex-col"
@@ -51,7 +51,7 @@ const Dealerhome = ({ dealerInfo }) => {
             />
             <label>City</label>
             <Select
-              options={cities[fromstate.name]}
+              options={cities[fromstate?.name]}
               labelField="name"
               valueField="name"
               onChange={(values) => setFromcity(values[0])}
@@ -68,7 +68,7 @@ const Dealerhome = ({ dealerInfo }) => {
             />
             <label>City</label>
             <Select
-              options={cities[tostate.name]}
+              options={cities[tostate?.name]}
               labelField="name"
               valueField="name"
               onChange={(values) => setTocity(values[0])}
@@ -76,7 +76,7 @@ const Dealerhome = ({ dealerInfo }) => {
           </div>
         </div>
         <input
-          className="cursor-pointer my-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className=" w-full cursor-pointer my-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           type="submit"
         />
       </form>
