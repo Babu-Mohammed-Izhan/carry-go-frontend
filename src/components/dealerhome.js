@@ -81,7 +81,7 @@ const Dealerhome = ({ dealerInfo }) => {
         />
       </form>
       <div className="flex flex-col items-center w-full">
-        <h2 className="font-semibold text-3xl my-7">Drivers</h2>
+        <h2 className="font-semibold text-3xl my-7">Available Drivers</h2>
         <div className="md:w-3/4 w-10/12 mx-auto">
           {driverData
             ? driverData.map((driver) => {

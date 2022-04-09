@@ -23,14 +23,14 @@ const DriverCard = ({ driverdata, dealerData }) => {
 
   return (
     <div
-      className="flex justify-between items-center w-full px-5 shadow-md my-5 cursor-pointer"
+      className="flex justify-between items-center w-full px-5 shadow-md my-5 cursor-pointer hover:shadow-lg"
       onClick={() => setClicked(!clicked)}
     >
-      <div>
-        <h2>Name: {driver.name}</h2>
-        <h2>Age: {driver.age} years old</h2>
-        <h3>Experience: {driver.experience} years</h3>
-        <h3>Transporter: {driver.transporter}</h3>
+      <div className="p-3">
+        <h2>Name: {driver?.name}</h2>
+        <h2>Age: {driver?.age} years old</h2>
+        <h3>Experience: {driver?.experience} years</h3>
+        <h3>Transporter: {driver?.transporter}</h3>
         {clicked ? (
           <>
             <h3>Mobile No: {driver.mobileno}</h3>
