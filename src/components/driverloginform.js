@@ -127,7 +127,9 @@ const Driverloginform = ({ setDriver, setUser }) => {
               </button>
             </div>
           </form>
-          <h1 className="text-center">Using OTP</h1>
+          <h1 className="text-center text-3xl font-extrabold text-gray-900">
+            Using OTP
+          </h1>
           {sent ? (
             <div>
               <label htmlFor="username">Otp</label>

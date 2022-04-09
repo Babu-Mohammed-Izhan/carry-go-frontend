@@ -122,17 +122,18 @@ const Dealerloginform = ({ setDealer, setUser }) => {
               </button>
             </div>
           </form>
-          <h1 className="text-center">Using OTP</h1>
+          <h1 className="text-center text-3xl font-extrabold text-gray-900">
+            Using OTP
+          </h1>
           {sent ? (
-            <div>
-              <label htmlFor="username">Otp</label>
+            <div className="mt-2">
+              <label htmlFor="otp">Otp</label>
               <input
                 value={otp}
                 onChange={(e) => setOtp(e.target.value)}
-                id="email"
-                name="email"
+                id="otp"
+                name="otp"
                 type="text"
-                autoComplete="email"
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               />
@@ -144,8 +145,8 @@ const Dealerloginform = ({ setDealer, setUser }) => {
               </button>
             </div>
           ) : (
-            <div>
-              <label htmlFor="username">Email</label>
+            <div className="mt-2">
+              <label htmlFor="email">Email</label>
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
