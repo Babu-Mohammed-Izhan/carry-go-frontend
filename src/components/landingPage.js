@@ -6,8 +6,8 @@ export default function Landing() {
   return (
     <>
       <LandinPageNavbar />
-      <main>
-        <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+      <main className="mt-4">
+        <div className="relative p-20 md:p-44 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
