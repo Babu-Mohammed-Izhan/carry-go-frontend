@@ -8,6 +8,7 @@ import DealerRegisterForm from './components/dealerregisterform';
 import DriverLoginForm from './components/driverloginform';
 import DriverRegisterForm from './components/driverregisterform';
 import Navbar from './components/navbar';
+import Landing from './components/landingPage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -41,8 +42,9 @@ function App() {
   if (user === null) {
     return (
       <Routes>
+        <Route path="/" element={<Landing />} />
         <Route
-          path="/"
+          path="/dealer"
           element={<DealerLoginForm setUser={setUser} setDealer={setDealer} />}
         />
         <Route path="/register" element={<DealerRegisterForm />} />
