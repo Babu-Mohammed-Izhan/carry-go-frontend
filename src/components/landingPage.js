@@ -25,12 +25,12 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
+                    Your journey starts with us.
                   </h1>
                   <p className="mt-4 text-lg text-blue-200">
-                    This is a simple example of a Landing Page you can build
-                    using Notus React. It features multiple CSS components based
-                    on the Tailwind CSS design system.
+                    This is a place where truck drivers and goods dealers can
+                    meet each other to find and give work, to make trade faster
+                    and easier for everyone.
                   </p>
                 </div>
               </div>
@@ -50,14 +50,14 @@ export default function Landing() {
               y="0"
             >
               <polygon
-                className="text-blueGray-200 fill-current"
+                className="text-blue-200 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
           </div>
         </div>
 
-        <section className="pb-20 bg-blueGray-200 -mt-24">
+        <section className="pb-20 bg-blue-200 -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -66,10 +66,11 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Awarded Agency</h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Divide details about your product or agency work into
-                      parts. A paragraph describing a feature will be enough.
+                    <h6 className="text-xl font-semibold">
+                      Most Innovative website 2016
+                    </h6>
+                    <p className="mt-2 mb-4 text-blue-500">
+                      Recepient of the MOst Innovative Website 2016 Award.
                     </p>
                   </div>
                 </div>
@@ -81,10 +82,11 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                       <i className="fas fa-retweet"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Free Revisions</h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
+                    <h6 className="text-xl font-semibold">Unlimited Hiring</h6>
+                    <p className="mt-2 mb-4 text-blue-500">
+                      Hire as many drivers as you need. Drivers can pick up as
+                      many jobs as they want as long as the time frame is
+                      compatible with each other.
                     </p>
                   </div>
                 </div>
@@ -96,10 +98,13 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                       <i className="fas fa-fingerprint"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Verified Company</h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough. Keep you user engaged!
+                    <h6 className="text-xl font-semibold">
+                      Security is our top priority
+                    </h6>
+                    <p className="mt-2 mb-4 text-blue-500">
+                      We make sure our drivers are paid on time and with
+                      competitve salaries. They are also given assistance and
+                      help in case of an emergency.
                     </p>
                   </div>
                 </div>
@@ -108,24 +113,18 @@ export default function Landing() {
 
             <div className="flex flex-wrap items-center mt-32">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                <div className="text-blue-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-user-friends text-xl"></i>
                 </div>
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">
                   Working with us is a pleasure
                 </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                  Don't let your uses guess by attaching tooltips and popoves to
-                  any element. Just make sure you enable them first via
-                  JavaScript.
+                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blue-600">
+                  We offer great security for both the driver as well as the
+                  dealer, with 24/7 support for any kinds of problems that may
+                  arise.
                 </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-                  The kit comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go. Just make sure you enable them first via
-                  JavaScript.
-                </p>
-                <Link to="/" className="font-bold text-blueGray-700 mt-8">
+                <Link to="/" className="font-bold text-blue-700 mt-8">
                   Check Notus React!
                 </Link>
               </div>
@@ -142,9 +141,8 @@ export default function Landing() {
                       Top Notch Services
                     </h4>
                     <p className="text-md font-light mt-2 text-black">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens.
+                      We offer a secure and transparent process for the hiring
+                      and dealership between a driver and dealer.
                     </p>
                   </blockquote>
                 </div>
@@ -174,10 +172,8 @@ export default function Landing() {
                     <i className="fas fa-rocket text-xl"></i>
                   </div>
                   <h3 className="text-3xl font-semibold">A growing company</h3>
-                  <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                    The extension comes with three pre-built pages to help you
-                    get started faster. You can change the text and images and
-                    you're good to go.
+                  <p className="mt-4 text-lg leading-relaxed text-blue-500">
+                    We are the leading company in freelance transport services.
                   </p>
                   <ul className="list-none mt-6">
                     <li className="py-2">
@@ -188,9 +184,7 @@ export default function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
-                            Carefully crafted components
-                          </h4>
+                          <h4 className="text-blue-500">Secure at both ends</h4>
                         </div>
                       </div>
                     </li>
@@ -198,13 +192,11 @@ export default function Landing() {
                       <div className="flex items-center">
                         <div>
                           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-lightBlue-600 bg-lightBlue-200 mr-3">
-                            <i className="fab fa-html5"></i>
+                            <i className="fab fa-checkmark"></i>
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
-                            Amazing page examples
-                          </h4>
+                          <h4 className="text-blue-500">Transparent Process</h4>
                         </div>
                       </div>
                     </li>
@@ -216,9 +208,7 @@ export default function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
-                            Dynamic components
-                          </h4>
+                          <h4 className="text-blue-500">Fast Response</h4>
                         </div>
                       </div>
                     </li>
@@ -229,7 +219,7 @@ export default function Landing() {
           </div>
         </section>
 
-        <section className="pb-20 relative block bg-blueGray-800">
+        <section className="pb-20 relative block bg-blue-800">
           <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
             style={{ transform: 'translateZ(0)' }}
@@ -244,7 +234,7 @@ export default function Landing() {
               y="0"
             >
               <polygon
-                className="text-blueGray-800 fill-current"
+                className="text-blue-800 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
@@ -256,7 +246,7 @@ export default function Landing() {
                 <h2 className="text-4xl font-semibold text-white">
                   Build something
                 </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
+                <p className="text-lg leading-relaxed mt-4 mb-4 text-blue-400">
                   Put the potentially record low maximum sea ice extent tihs
                   year down to low ice. According to the National Oceanic and
                   Atmospheric Administration, Ted, Scambos.
@@ -265,37 +255,37 @@ export default function Landing() {
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                <div className="text-blue-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <i className="fas fa-medal text-xl"></i>
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
                   Excelent Services
                 </h6>
-                <p className="mt-2 mb-4 text-blueGray-400">
+                <p className="mt-2 mb-4 text-blue-400">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                <div className="text-blue-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <i className="fas fa-poll text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   Grow your market
                 </h5>
-                <p className="mt-2 mb-4 text-blueGray-400">
+                <p className="mt-2 mb-4 text-blue-400">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                <div className="text-blue-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <i className="fas fa-lightbulb text-xl"></i>
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   Launch time
                 </h5>
-                <p className="mt-2 mb-4 text-blueGray-400">
+                <p className="mt-2 mb-4 text-blue-400">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
