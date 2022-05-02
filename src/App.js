@@ -47,7 +47,7 @@ function App() {
           path="/dealer"
           element={<DealerLoginForm setUser={setUser} setDealer={setDealer} />}
         />
-        <Route path="/register" element={<DealerRegisterForm />} />
+        <Route path="/dealer/register" element={<DealerRegisterForm />} />
         <Route
           path="/driver"
           element={<DriverLoginForm setUser={setUser} setDriver={setDriver} />}

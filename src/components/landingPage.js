@@ -25,12 +25,12 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
+                    Your journey starts with us.
                   </h1>
                   <p className="mt-4 text-lg text-blue-200">
-                    This is a simple example of a Landing Page you can build
-                    using Notus React. It features multiple CSS components based
-                    on the Tailwind CSS design system.
+                    This is a place where truck drivers and goods dealers can
+                    meet each other to find and give work, to make trade faster
+                    and easier for everyone.
                   </p>
                 </div>
               </div>
@@ -66,10 +66,11 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Awarded Agency</h6>
+                    <h6 className="text-xl font-semibold">
+                      Most Innovative website 2016
+                    </h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Divide details about your product or agency work into
-                      parts. A paragraph describing a feature will be enough.
+                      Recepient of the MOst Innovative Website 2016 Award.
                     </p>
                   </div>
                 </div>
