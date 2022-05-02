@@ -82,10 +82,11 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                       <i className="fas fa-retweet"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Free Revisions</h6>
+                    <h6 className="text-xl font-semibold">Unlimited Hiring</h6>
                     <p className="mt-2 mb-4 text-blue-500">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
+                      Hire as many drivers as you need. Drivers can pick up as
+                      many jobs as they want as long as the time frame is
+                      compatible with each other.
                     </p>
                   </div>
                 </div>
@@ -97,10 +98,13 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                       <i className="fas fa-fingerprint"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Verified Company</h6>
+                    <h6 className="text-xl font-semibold">
+                      Security is our top priority
+                    </h6>
                     <p className="mt-2 mb-4 text-blue-500">
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough. Keep you user engaged!
+                      We make sure our drivers are paid on time and with
+                      competitve salaries. They are also given assistance and
+                      help in case of an emergency.
                     </p>
                   </div>
                 </div>
