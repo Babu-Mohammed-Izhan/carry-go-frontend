@@ -50,7 +50,7 @@ export default function Landing() {
               y="0"
             >
               <polygon
-                className="text-blueGray-200 fill-current"
+                className="text-blue-200 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
@@ -143,9 +143,8 @@ export default function Landing() {
                       Top Notch Services
                     </h4>
                     <p className="text-md font-light mt-2 text-black">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens.
+                      We offer a secure and transparent process for the hiring
+                      and dealership between a driver and deaker.
                     </p>
                   </blockquote>
                 </div>
@@ -176,9 +175,7 @@ export default function Landing() {
                   </div>
                   <h3 className="text-3xl font-semibold">A growing company</h3>
                   <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                    The extension comes with three pre-built pages to help you
-                    get started faster. You can change the text and images and
-                    you're good to go.
+                    We are the leading company in freelance transport services.
                   </p>
                   <ul className="list-none mt-6">
                     <li className="py-2">
@@ -189,9 +186,7 @@ export default function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
-                            Carefully crafted components
-                          </h4>
+                          <h4 className="text-blue-500">Secure at both ends</h4>
                         </div>
                       </div>
                     </li>
@@ -199,13 +194,11 @@ export default function Landing() {
                       <div className="flex items-center">
                         <div>
                           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-lightBlue-600 bg-lightBlue-200 mr-3">
-                            <i className="fab fa-html5"></i>
+                            <i className="fab fa-checkmark"></i>
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
-                            Amazing page examples
-                          </h4>
+                          <h4 className="text-blue-500">Transparent Process</h4>
                         </div>
                       </div>
                     </li>
@@ -217,9 +210,7 @@ export default function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
-                            Dynamic components
-                          </h4>
+                          <h4 className="text-blue-500">Fast Response</h4>
                         </div>
                       </div>
                     </li>
