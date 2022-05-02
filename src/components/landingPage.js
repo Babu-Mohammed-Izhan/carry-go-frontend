@@ -70,7 +70,7 @@ export default function Landing() {
                       Most Innovative website 2016
                     </h6>
                     <p className="mt-2 mb-4 text-blue-500">
-                      Recepient of the MOst Innovative Website 2016 Award.
+                      Recepient of the Most Innovative Website 2016 Award.
                     </p>
                   </div>
                 </div>
